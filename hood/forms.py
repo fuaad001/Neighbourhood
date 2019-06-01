@@ -9,7 +9,7 @@ class NeighbourhoodForm(forms.ModelForm):
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
-        exclude = ['user']
+        exclude = ['name']
 
 class BusinessForm(forms.ModelForm):
     class Meta:
@@ -24,9 +24,9 @@ class CategoryForm(forms.ModelForm):
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        exclude = ['']
+        exclude = ['user', 'neigbourhood_id']
 
 class ServiceForm(forms.ModelForm):
     class Meta:
         model = Service
-        exclude = ['']
+        exclude = ['neighbourhood_id']
