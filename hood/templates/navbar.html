@@ -55,9 +55,9 @@
           </li>
           {% if client.role == Admin %}
           <li class="nav-item">
-            <a href="{% url 'admin'%}" class="nav-link border border-light rounded waves-effect"
+            <a href="{% url 'user_admin'%}" class="nav-link border border-light rounded waves-effect"
               target="_self">
-              <i class="fas fa-unlock-alt"></i>Admin Page
+              <i class="fas fa-user-shield"></i>Admin Page
             </a>
           </li>
           {% endif %}
