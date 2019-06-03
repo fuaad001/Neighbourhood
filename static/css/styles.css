@@ -58,6 +58,14 @@
   .regimg{
     margin-top: 2%;
   }
+
+  .newsimg{
+    height: 130px;
+  }
+
+  .pad{
+    padding: 10%;
+  }
 }
 
 @media only screen and (max-width: 812px) {
