@@ -18,22 +18,22 @@
 
       <!-- Left -->
       <ul class="navbar-nav mr-auto hide">
-        <li class="nav-item active">
+        <li class="nav-item active one">
           <a class="nav-link waves-effect" href="{% url 'home' %}">Dashboard
             <span class="sr-only">(current)</span>
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item two">
           <a class="nav-link waves-effect" href="{% url 'profile' %}" target="_self">Profile</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item three">
           <a class="nav-link waves-effect" href="{% url 'services' %}"
             target="_self">Services</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item four">
           <a class="nav-link waves-effect" href="{% url 'business' %}" target="_self">Business</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item five">
           <a class="nav-link waves-effect" href="{% url 'about' %}" target="_self">About Us</a>
         </li>
       </ul>
@@ -53,11 +53,18 @@
               <i class="fas fa-unlock-alt"></i>Change Password
             </a>
           </li>
-          {% if client.role == Admin %}
+          {% if main_user.role == 'Admin' %}
           <li class="nav-item">
             <a href="{% url 'user_admin'%}" class="nav-link border border-light rounded waves-effect"
               target="_self">
               <i class="fas fa-user-shield"></i>Admin Page
+            </a>
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a href="{% url 'change'%}" class="nav-link border border-light rounded waves-effect"
+              target="_self">
+              <i class="fas fa-exchange-alt"></i>Change Neighbourhood
             </a>
           </li>
           {% endif %}
@@ -85,16 +92,16 @@
   </a>
 
   <div class="list-group list-group-flush">
-    <a href="{% url 'home' %}" class="list-group-item active waves-effect">
+    <a href="{% url 'home' %}" class="list-group-item active waves-effect one">
       <i class="fas fa-chart-pie mr-3"></i>Dashboard
     </a>
-    <a href="{% url 'profile' %}" class="list-group-item list-group-item-action waves-effect">
+    <a href="{% url 'profile' %}" class="two list-group-item list-group-item-action waves-effect">
       <i class="fas fa-user mr-3"></i>Profile</a>
-    <a href="{% url 'services' %}" class="list-group-item list-group-item-action waves-effect">
+    <a href="{% url 'services' %}" class="three list-group-item list-group-item-action waves-effect">
       <i class="fas fa-table mr-3"></i>Services</a>
-    <a href="{% url 'business' %}" class="list-group-item list-group-item-action waves-effect">
+    <a href="{% url 'business' %}" class="four list-group-item list-group-item-action waves-effect">
       <i class="fas fa-money-bill-alt mr-3"></i>Business</a>
-    <a href="{% url 'about' %}" class="list-group-item list-group-item-action waves-effect">
+    <a href="{% url 'about' %}" class="five list-group-item list-group-item-action waves-effect">
       <i class="fas fa-address-card mr-3"></i>About Us</a>
   </div>
 
