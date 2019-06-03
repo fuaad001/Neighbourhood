@@ -21,7 +21,7 @@ This is a online neighbourhood tracking application where a user can register as
 * Install all the requirements found in requirements file.
 * On your terminal run `python manage.py runserver`
 * Access the live site using the local host provided
-* Or access the live website by clicking on this url https://lacasadeburrio.herokuapp.com/
+* Or access the live website by clicking on this url https://lacasadebarrie.herokuapp.com/
 
 ## Known Bugs
 No Bugs
