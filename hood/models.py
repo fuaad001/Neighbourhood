@@ -31,11 +31,12 @@ class Neighbourhood(models.Model):
         self.update(occupants_count = value)
 
 class User(models.Model):
+    profile_picture = models.ImageField(upload_to = 'images/', null =True, blank = True, default = '../static/images/noimage.svg')
     name = models.ForeignKey(User, on_delete = models.CASCADE)
     id_number = models.IntegerField()
     neighbourhood_id = models.ForeignKey(Neighbourhood, on_delete = models.CASCADE)
     email_address = models.EmailField(max_length=254)
-    role = models.CharField(max_length=10, choices=[('Ad', 'Admin'), ('Rs', 'Resident')], default='Resident')
+    role = models.CharField(max_length=10, choices=[('Admin', 'Admin'), ('Resident', 'Resident')], default='Resident')
 
     def __str__(self):
         return self.name.username
