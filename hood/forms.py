@@ -14,7 +14,7 @@ class UserForm(forms.ModelForm):
 class BusinessForm(forms.ModelForm):
     class Meta:
         model = Business
-        exclude = ['user', 'neigbourhood_id']
+        exclude = ['user', 'neighbourhood_id']
 
 class CategoryForm(forms.ModelForm):
     class Meta:
@@ -24,7 +24,7 @@ class CategoryForm(forms.ModelForm):
 class NewsForm(forms.ModelForm):
     class Meta:
         model = News
-        exclude = ['user', 'neigbourhood_id']
+        exclude = ['user', 'neighbourhood_id']
 
 class ServiceForm(forms.ModelForm):
     class Meta:
